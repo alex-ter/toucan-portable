@@ -3,17 +3,20 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
+
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Scripts &mdash; Toucan v3.0.4 documentation</title>
+    <title>Scripts &mdash; Toucan 3.1.1 documentation</title>
+    
     <link rel="stylesheet" href="../_static/default.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     '3.0.4',
+        VERSION:     '3.1.1',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -22,7 +25,7 @@
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
-    <link rel="top" title="Toucan v3.0.4 documentation" href="../index.html" />
+    <link rel="top" title="Toucan 3.1.1 documentation" href="../index.html" />
     <link rel="next" title="Settings" href="settings.html" />
     <link rel="prev" title="Variables" href="variables.html" /> 
   </head>
@@ -39,7 +42,7 @@
         <li class="right" >
           <a href="variables.html" title="Variables"
              accesskey="P">previous</a> |</li>
-        <li><a href="../index.html">Toucan v3.0.4 documentation</a> &raquo;</li> 
+        <li><a href="../index.html">Toucan 3.1.1 documentation</a> &raquo;</li> 
       </ul>
     </div>  
 
@@ -61,10 +64,10 @@ should accept and existing Lua scripts.</p>
 <div class="section" id="user-interface">
 <h2>User Interface<a class="headerlink" href="#user-interface" title="Permalink to this headline">¶</a></h2>
 <blockquote>
-<div class="figure align-center">
+<div><div class="figure align-center">
 <img alt="The Script Tab" src="../_images/script.png" />
 </div>
-</blockquote>
+</div></blockquote>
 <p>The Script interface is very similar to the Variables interface. Scripts
 can be saved, added and removed using the standard controls in the top
 left of the window. To run a script simply press the Run button. The
@@ -113,13 +116,9 @@ following extra commands:</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>jobname</strong> &#8211; The name of the job</li>
-</ul>
-</td>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>jobname</strong> (<em>string</em>) &#8211; The name of the job</td>
 </tr>
-<tr class="field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">none</p>
-</td>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">none</td>
 </tr>
 </tbody>
 </table>
@@ -133,17 +132,17 @@ following extra commands:</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>source</strong> &#8211; The source path</li>
-<li><strong>dest</strong> &#8211; The destination path</li>
-<li><strong>function</strong> &#8211; The function to perform, Copy, Mirror, Move, Equalise, Clean</li>
-<li><strong>checks</strong> &#8211; The checks to perform when comparing files</li>
-<li><strong>options</strong> &#8211; The options to use, for more information see</li>
-<li><strong>rules</strong> &#8211; The name of a set of rules</li>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>source</strong> (<em>string</em>) &#8211; The source path</li>
+<li><strong>dest</strong> (<em>string</em>) &#8211; The destination path</li>
+<li><strong>function</strong> (<em>string</em>) &#8211; The function to perform, Copy, Mirror, Move, Equalise, Clean</li>
+<li><strong>checks</strong> (<em>table</em>) &#8211; The checks to perform when comparing files</li>
+<li><strong>options</strong> (<em>table</em>) &#8211; The options to use, for more information see</li>
+<li><strong>rules</strong> (<em>string</em>) &#8211; The name of a set of rules</li>
 </ul>
 </td>
 </tr>
-<tr class="field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">none</p>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">none</p>
 </td>
 </tr>
 </tbody>
@@ -161,13 +160,9 @@ following extra commands:</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>jobname</strong> &#8211; The name of the job</li>
-</ul>
-</td>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>jobname</strong> (<em>string</em>) &#8211; The name of the job</td>
 </tr>
-<tr class="field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">none</p>
-</td>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">none</td>
 </tr>
 </tbody>
 </table>
@@ -181,17 +176,17 @@ following extra commands:</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>paths</strong> &#8211; The files and folders to archive</li>
-<li><strong>location</strong> &#8211; The location of the archive</li>
-<li><strong>function</strong> &#8211; The function to perform, Complete, Update, Differential, Restore</li>
-<li><strong>ratio</strong> &#8211; The compression ratio between 0 &amp; 5</li>
-<li><strong>options</strong> &#8211; The options to use, see for more information</li>
-<li><strong>rules</strong> &#8211; The name of a set of rules</li>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>paths</strong> (<em>table</em>) &#8211; The files and folders to archive</li>
+<li><strong>location</strong> (<em>string</em>) &#8211; The location of the archive</li>
+<li><strong>function</strong> (<em>string</em>) &#8211; The function to perform, Complete, Update, Differential, Restore</li>
+<li><strong>ratio</strong> (<em>integer</em>) &#8211; The compression ratio between 0 &amp; 5</li>
+<li><strong>options</strong> (<em>table</em>) &#8211; The options to use, see for more information</li>
+<li><strong>rules</strong> (<em>string</em>) &#8211; The name of a set of rules</li>
 </ul>
 </td>
 </tr>
-<tr class="field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">none</p>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">none</p>
 </td>
 </tr>
 </tbody>
@@ -209,13 +204,9 @@ following extra commands:</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>jobname</strong> &#8211; The name of the job</li>
-</ul>
-</td>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>jobname</strong> (<em>string</em>) &#8211; The name of the job</td>
 </tr>
-<tr class="field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">none</p>
-</td>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">none</td>
 </tr>
 </tbody>
 </table>
@@ -229,14 +220,14 @@ following extra commands:</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>paths</strong> &#8211; The files and folders to secure</li>
-<li><strong>function</strong> &#8211; Either Encrypt or Decrypt</li>
-<li><strong>rules</strong> &#8211; The name of a set of rules</li>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>paths</strong> (<em>table</em>) &#8211; The files and folders to secure</li>
+<li><strong>function</strong> (<em>string</em>) &#8211; Either Encrypt or Decrypt</li>
+<li><strong>rules</strong> (<em>string</em>) &#8211; The name of a set of rules</li>
 </ul>
 </td>
 </tr>
-<tr class="field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">none</p>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">none</p>
 </td>
 </tr>
 </tbody>
@@ -254,14 +245,14 @@ following extra commands:</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>message</strong> &#8211; The message</li>
-<li><strong>showtime</strong> &#8211; If true then the current time is displayed</li>
-<li><strong>error</strong> &#8211; If true then the entry is highlighted, this has no effect on the command line</li>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>message</strong> (<em>string</em>) &#8211; The message</li>
+<li><strong>showtime</strong> (<em>bool</em>) &#8211; If true then the current time is displayed</li>
+<li><strong>error</strong> (<em>bool</em>) &#8211; If true then the entry is highlighted, this has no effect on the command line</li>
 </ul>
 </td>
 </tr>
-<tr class="field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">none</p>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">none</p>
 </td>
 </tr>
 </tbody>
@@ -279,16 +270,11 @@ following extra commands:</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>variable</strong> &#8211; The string to expand</li>
-</ul>
-</td>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>variable</strong> (<em>string</em>) &#8211; The string to expand</td>
 </tr>
-<tr class="field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">The expansion, or if none was found the original string</p>
-</td>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The expansion, or if none was found the original string</td>
 </tr>
-<tr class="field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">string</p>
-</td>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">string</td>
 </tr>
 </tbody>
 </table>
@@ -301,18 +287,15 @@ following extra commands:</p>
 <dt>
 <tt class="descname">delete</tt><big>(</big><em>path</em><big>)</big></dt>
 <dd><blockquote>
-Deletes the given file, this does not work on folders</blockquote>
+<div>Deletes the given file, this does not work on folders</div></blockquote>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>path</strong> &#8211; The path of the file to delete
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>path</strong> &#8211; The path of the file to delete
 :type path: string
 :returns: Whether the file was successfully deleted
-:rtype: bool</li>
-</ul>
-</td>
+:rtype: bool</td>
 </tr>
 </tbody>
 </table>
@@ -330,16 +313,16 @@ and any existing file will be overwritten</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>source</strong> &#8211; The path to the source file</li>
-<li><strong>dest</strong> &#8211; The path that the file should be copied to</li>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>source</strong> (<em>string</em>) &#8211; The path to the source file</li>
+<li><strong>dest</strong> (<em>string</em>) &#8211; The path that the file should be copied to</li>
 </ul>
 </td>
 </tr>
-<tr class="field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">Whether the file was successfully copied</p>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">Whether the file was successfully copied</p>
 </td>
 </tr>
-<tr class="field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">bool</p>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">bool</p>
 </td>
 </tr>
 </tbody>
@@ -358,16 +341,16 @@ and any existing file will be overwritten</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>source</strong> &#8211; The path to the source file</li>
-<li><strong>dest</strong> &#8211; The path that the file should be copied to</li>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>source</strong> (<em>string</em>) &#8211; The path to the source file</li>
+<li><strong>dest</strong> (<em>string</em>) &#8211; The path that the file should be copied to</li>
 </ul>
 </td>
 </tr>
-<tr class="field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">Whether the file was successfully moved</p>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">Whether the file was successfully moved</p>
 </td>
 </tr>
-<tr class="field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">bool</p>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">bool</p>
 </td>
 </tr>
 </tbody>
@@ -386,16 +369,16 @@ and any existing file will be overwritten. This is the same as a copy</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>source</strong> &#8211; The path to the source file</li>
-<li><strong>dest</strong> &#8211; The path that the file should be copied to</li>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>source</strong> (<em>string</em>) &#8211; The path to the source file</li>
+<li><strong>dest</strong> (<em>string</em>) &#8211; The path that the file should be copied to</li>
 </ul>
 </td>
 </tr>
-<tr class="field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">Whether the file was successfully renamed</p>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">Whether the file was successfully renamed</p>
 </td>
 </tr>
-<tr class="field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">bool</p>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">bool</p>
 </td>
 </tr>
 </tbody>
@@ -414,16 +397,16 @@ program to run</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>path</strong> &#8211; The path to be run</li>
-<li><strong>async</strong> &#8211; If false the script will wait for the program to finish</li>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>path</strong> (<em>string</em>) &#8211; The path to be run</li>
+<li><strong>async</strong> (<em>bool</em>) &#8211; If false the script will wait for the program to finish</li>
 </ul>
 </td>
 </tr>
-<tr class="field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">The return value of the program is not async, otherwise nothing</p>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">The return value of the program is not async, otherwise nothing</p>
 </td>
 </tr>
-<tr class="field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">int</p>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">int</p>
 </td>
 </tr>
 </tbody>
@@ -443,16 +426,11 @@ used to run a script with the following code::
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>name</strong> &#8211; The name of the script</li>
-</ul>
-</td>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>name</strong> (<em>string</em>) &#8211; The name of the script</td>
 </tr>
-<tr class="field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">The full path to the script</p>
-</td>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The full path to the script</td>
 </tr>
-<tr class="field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">string</p>
-</td>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">string</td>
 </tr>
 </tbody>
 </table>
@@ -471,7 +449,7 @@ used for all subsequent Secure and Backup with password jobs.</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field"><th class="field-name">Return type:</th><td class="field-body">none</td>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">none</td>
 </tr>
 </tbody>
 </table>
@@ -488,9 +466,9 @@ used for all subsequent Secure and Backup with password jobs.</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field"><th class="field-name">Returns:</th><td class="field-body">Success or failure</td>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Success or failure</td>
 </tr>
-<tr class="field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
 </tr>
 </tbody>
 </table>
@@ -553,7 +531,7 @@ used for all subsequent Secure and Backup with password jobs.</p>
 <div id="searchbox" style="display: none">
   <h3>Quick search</h3>
     <form class="search" action="../search.html" method="get">
-      <input type="text" name="q" size="18" />
+      <input type="text" name="q" />
       <input type="submit" value="Go" />
       <input type="hidden" name="check_keywords" value="yes" />
       <input type="hidden" name="area" value="default" />
@@ -579,12 +557,12 @@ used for all subsequent Secure and Backup with password jobs.</p>
         <li class="right" >
           <a href="variables.html" title="Variables"
              >previous</a> |</li>
-        <li><a href="../index.html">Toucan v3.0.4 documentation</a> &raquo;</li> 
+        <li><a href="../index.html">Toucan 3.1.1 documentation</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer">
-        &copy; Copyright 2010, Steven Lamerton.
-      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.0b2.
+        &copy; Copyright 2013, Steve Lamerton, Alex Tereschenko.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
     </div>
   </body>
 </html>

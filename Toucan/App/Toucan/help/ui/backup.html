@@ -3,17 +3,20 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
+
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Backup &mdash; Toucan v3.0.4 documentation</title>
+    <title>Backup &mdash; Toucan 3.1.1 documentation</title>
+    
     <link rel="stylesheet" href="../_static/default.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     '3.0.4',
+        VERSION:     '3.1.1',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -22,7 +25,7 @@
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
-    <link rel="top" title="Toucan v3.0.4 documentation" href="../index.html" />
+    <link rel="top" title="Toucan 3.1.1 documentation" href="../index.html" />
     <link rel="next" title="Secure" href="secure.html" />
     <link rel="prev" title="Sync" href="sync.html" /> 
   </head>
@@ -39,7 +42,7 @@
         <li class="right" >
           <a href="sync.html" title="Sync"
              accesskey="P">previous</a> |</li>
-        <li><a href="../index.html">Toucan v3.0.4 documentation</a> &raquo;</li> 
+        <li><a href="../index.html">Toucan 3.1.1 documentation</a> &raquo;</li> 
       </ul>
     </div>  
 
@@ -74,10 +77,10 @@ also add Variables and expand all of the folders you have selected. The
 file list is automatically coloured using any Rules you might have
 selected.</p>
 <blockquote>
-<div class="figure align-center">
+<div><div class="figure align-center">
 <img alt="The Backup Tab" src="../_images/backup.png" />
 </div>
-</blockquote>
+</div></blockquote>
 </div>
 <div class="section" id="function">
 <h2>Function<a class="headerlink" href="#function" title="Permalink to this headline">¶</a></h2>
@@ -96,12 +99,55 @@ Currently this only supports one source folder.</dd>
 <dt>Restore</dt>
 <dd>Restores files from an archive into a folder. This works the other way
 on to other the main functions, you add the files to the file list and
-they are extracted into the folder specified.</dd>
+they are extracted into the folder specified. Currently this only supports
+one source file.</dd>
+<dt>Mirror</dt>
+<dd><p class="first">This one is somewhat similar to Update, however it strives to exactly
+mirror the changes in the source files/folders into the Backup Location.
+Specifically, the following 7-Zip options are used: &#8220;-up1q0r2x1y2z1w2&#8221;.
+Below are details about archive and file actions that translates into.</p>
+<table border="1" class="last docutils">
+<colgroup>
+<col width="54%" />
+<col width="46%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">State condition</th>
+<th class="head">Action</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>File exists in archive, but is not matched
+with wildcard</td>
+<td>File copied from old archive to new</td>
+</tr>
+<tr class="row-odd"><td>File exists in archive, but doesn&#8217;t exist on disk</td>
+<td>File ignored, not added to the new archive</td>
+</tr>
+<tr class="row-even"><td>File doesn&#8217;t exist in archive, but exists on disk</td>
+<td>File added from disk to new archive</td>
+</tr>
+<tr class="row-odd"><td>File in archive is newer than the file on disk</td>
+<td>File is copied from old archive to new</td>
+</tr>
+<tr class="row-even"><td>File in archive is older than the file on disk</td>
+<td>File is added from disk to new archive</td>
+</tr>
+<tr class="row-odd"><td>File in archive is same as the file on disk</td>
+<td>File is copied from old archive to new</td>
+</tr>
+<tr class="row-even"><td>Can not be detected what file is newer
+(times are the same, sizes are different)</td>
+<td>File is added from disk to new archive</td>
+</tr>
+</tbody>
+</table>
+</dd>
 </dl>
 </div>
 <div class="section" id="format">
 <h2>Format<a class="headerlink" href="#format" title="Permalink to this headline">¶</a></h2>
-<p>Toucan supports two formats currently, they are:</p>
+<p>Toucan supports three formats currently, they are:</p>
 <dl class="docutils">
 <dt>Zip</dt>
 <dd>An industry standard format with average compression levels and speed.
@@ -184,7 +230,7 @@ job, or red to show that they have been excluded.</p>
 <div id="searchbox" style="display: none">
   <h3>Quick search</h3>
     <form class="search" action="../search.html" method="get">
-      <input type="text" name="q" size="18" />
+      <input type="text" name="q" />
       <input type="submit" value="Go" />
       <input type="hidden" name="check_keywords" value="yes" />
       <input type="hidden" name="area" value="default" />
@@ -210,12 +256,12 @@ job, or red to show that they have been excluded.</p>
         <li class="right" >
           <a href="sync.html" title="Sync"
              >previous</a> |</li>
-        <li><a href="../index.html">Toucan v3.0.4 documentation</a> &raquo;</li> 
+        <li><a href="../index.html">Toucan 3.1.1 documentation</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer">
-        &copy; Copyright 2010, Steven Lamerton.
-      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.0b2.
+        &copy; Copyright 2013, Steve Lamerton, Alex Tereschenko.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
     </div>
   </body>
 </html>
