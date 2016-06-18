@@ -11,3 +11,10 @@ print = toucan.OutputProgress
 getscript = toucan.GetScriptPath
 inputpassword = toucan.InputPassword
 shutdown = toucan.Shutdown
+
+FinishingLine = toucan.FinishingLine
+FinishingInfo = toucan.FinishingInfo
+Message = toucan.Message
+StartingInfo = toucan.StartingInfo
+StartingLine = toucan.StartingLine
+Error = toucan.Error
