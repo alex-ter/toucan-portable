@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
@@ -10,7 +8,7 @@
     
     <title>Examples &mdash; Toucan 3.1.3 documentation</title>
     
-    <link rel="stylesheet" href="../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     
     <script type="text/javascript">
@@ -29,8 +27,8 @@
     <link rel="next" title="Compiling Toucan" href="../devel/compiling.html" />
     <link rel="prev" title="Command Line" href="../commandline.html" /> 
   </head>
-  <body>
-    <div class="related">
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -42,14 +40,14 @@
         <li class="right" >
           <a href="../commandline.html" title="Command Line"
              accesskey="P">previous</a> |</li>
-        <li><a href="../index.html">Toucan 3.1.3 documentation</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="../index.html">Toucan 3.1.3 documentation</a> &raquo;</li> 
       </ul>
     </div>  
 
     <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper">
-          <div class="body">
+          <div class="body" role="main">
             
   <div class="section" id="examples">
 <h1>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h1>
@@ -64,77 +62,80 @@
 </pre></div>
 </div>
 <p>Running a Custom Job:</p>
-<div class="highlight-python"><pre>sync([[my\source]], [[my\dest]], "Copy", {size = true, time = false, short = true, full = false}, {timestamps = true, attributes = true, ignorero = false, ignoredls = false, recycle = false, previewchanges = false})</pre>
+<div class="highlight-python"><div class="highlight"><pre>sync([[my\source]], [[my\dest]], &quot;Copy&quot;, {size = true, time = false, short = true, full = false}, {timestamps = true, attributes = true, ignorero = false, ignoredls = false, recycle = false, previewchanges = false})
+</pre></div>
 </div>
 <p>Flow Control:</p>
-<div class="highlight-python"><pre>day = os.date("%A")
-if day == "Sunday" then
-        print("Never run the backup on a Sunday!")
-elseif day == "Saturday" then
-        backup("WeekendBackup")
+<div class="highlight-python"><div class="highlight"><pre>day = os.date(&quot;%A&quot;)
+if day == &quot;Sunday&quot; then
+        print(&quot;Never run the backup on a Sunday!&quot;)
+elseif day == &quot;Saturday&quot; then
+        backup(&quot;WeekendBackup&quot;)
 else
-        sync("DailySync")
-end</pre>
+        sync(&quot;DailySync&quot;)
+end
+</pre></div>
 </div>
 <p>The example below shows the scipt that is used to build Toucan test
 builds. It shows a few of the many different capabilities of the Lua
 scripting system.:</p>
-<div class="highlight-python"><pre>packageversion = "3.0.0.0"
-displayversion = "3.0 Pre-Release 1"
+<div class="highlight-python"><div class="highlight"><pre>packageversion = &quot;3.0.0.0&quot;
+displayversion = &quot;3.0 Pre-Release 1&quot;
 
 toucanpath = [[C:\Users\Steven\Desktop\Toucan\Application\]]
-nsispath = [["C:\Program Files (x86)\NSIS\makensis.exe"]]
+nsispath = [[&quot;C:\Program Files (x86)\NSIS\makensis.exe&quot;]]
 compressorpath = [[C:\Users\Steven\Desktop\AppCompactor\AppCompactor.exe]]
 installerpath = [[C:\Users\Steven\Desktop\PortableApps.comInstaller\PortableApps.comInstaller.exe]]
 
 --Firstly we update the appinfo file to the latest version
 io.input(toucanpath .. [[App\AppInfo\appinfo.ini]])
-t = io.read("*all")
-t = string.gsub(t, "PackageVersion=%d%.%d%.%d%.%d", "PackageVersion=" .. packageversion)
-t = string.gsub(t, "DisplayVersion=.-\n", "DisplayVersion=" .. displayversion .. "\n\n")
+t = io.read(&quot;*all&quot;)
+t = string.gsub(t, &quot;PackageVersion=%d%.%d%.%d%.%d&quot;, &quot;PackageVersion=&quot; .. packageversion)
+t = string.gsub(t, &quot;DisplayVersion=.-\n&quot;, &quot;DisplayVersion=&quot; .. displayversion .. &quot;\n\n&quot;)
 io.output(toucanpath .. [[App\AppInfo\appinfo.ini]])
 io.write(t)
 io.close()
 
 --Then we update the launcher
 io.input(toucanpath .. [[Other\Source\ToucanLauncher.nsi]])
-t = io.read("*all")
-t = string.gsub(t, [[!define VER "%d%.%d%.%d%.%d"]], [[!define VER "]].. packageversion .. [["]])
+t = io.read(&quot;*all&quot;)
+t = string.gsub(t, [[!define VER &quot;%d%.%d%.%d%.%d&quot;]], [[!define VER &quot;]].. packageversion .. [[&quot;]])
 io.output(toucanpath .. [[Other\Source\ToucanLauncher.nsi]])
 io.write(t)
 io.close()
 
 --Run the unittests
 if execute(toucanpath .. [[\App\Toucan\toucan.exe -u]]) ~= 0 then
-        print("The unit tests failed", false, true)
+        print(&quot;The unit tests failed&quot;, false, true)
         return
 else
-        print("Unit tests passed")
+        print(&quot;Unit tests passed&quot;)
 end
 
 --Build the launcher
-if execute(nsispath .. " \"" .. toucanpath .. [[\Other\Source\ToucanLauncher.nsi"]]) ~= 0 then
-        print("Building the launcher failed", false, true)
+if execute(nsispath .. &quot; \&quot;&quot; .. toucanpath .. [[\Other\Source\ToucanLauncher.nsi&quot;]]) ~= 0 then
+        print(&quot;Building the launcher failed&quot;, false, true)
         return
 else
-        print("Launcher built")
+        print(&quot;Launcher built&quot;)
 end
 
 --Compress the app
-if execute(compressorpath .. " " .. toucanpath) ~= 0 then
-        print("Compression failed", false, true)
+if execute(compressorpath .. &quot; &quot; .. toucanpath) ~= 0 then
+        print(&quot;Compression failed&quot;, false, true)
         return
 else
-        print("App compressed")
+        print(&quot;App compressed&quot;)
 end
 
 --Build the installer
-if execute(installerpath .. " " .. toucanpath) ~= 0 then
-        print("Building the installer failed", false, true)
+if execute(installerpath .. &quot; &quot; .. toucanpath) ~= 0 then
+        print(&quot;Building the installer failed&quot;, false, true)
         return
 else
-        print("Installer created")
-end</pre>
+        print(&quot;Installer created&quot;)
+end
+</pre></div>
 </div>
 </div>
 
@@ -142,7 +143,7 @@ end</pre>
           </div>
         </div>
       </div>
-      <div class="sphinxsidebar">
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
             <p class="logo"><a href="../index.html">
               <img class="logo" src="../_static/toucan.png" alt="Logo"/>
@@ -153,12 +154,14 @@ end</pre>
   <h4>Next topic</h4>
   <p class="topless"><a href="../devel/compiling.html"
                         title="next chapter">Compiling Toucan</a></p>
-  <h3>This Page</h3>
-  <ul class="this-page-menu">
-    <li><a href="../_sources/examples/examples.txt"
-           rel="nofollow">Show Source</a></li>
-  </ul>
-<div id="searchbox" style="display: none">
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/examples/examples.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
     <form class="search" action="../search.html" method="get">
       <input type="text" name="q" />
@@ -175,7 +178,7 @@ end</pre>
       </div>
       <div class="clearer"></div>
     </div>
-    <div class="related">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -187,12 +190,12 @@ end</pre>
         <li class="right" >
           <a href="../commandline.html" title="Command Line"
              >previous</a> |</li>
-        <li><a href="../index.html">Toucan 3.1.3 documentation</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="../index.html">Toucan 3.1.3 documentation</a> &raquo;</li> 
       </ul>
     </div>
-    <div class="footer">
+    <div class="footer" role="contentinfo">
         &copy; Copyright 2013, Steve Lamerton, Alex Tereschenko.
-      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
     </div>
   </body>
 </html>

@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
@@ -10,7 +8,7 @@
     
     <title>Variables &mdash; Toucan 3.1.3 documentation</title>
     
-    <link rel="stylesheet" href="../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     
     <script type="text/javascript">
@@ -29,8 +27,8 @@
     <link rel="next" title="Scripts" href="scripts.html" />
     <link rel="prev" title="Rules" href="rules.html" /> 
   </head>
-  <body>
-    <div class="related">
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -42,14 +40,14 @@
         <li class="right" >
           <a href="rules.html" title="Rules"
              accesskey="P">previous</a> |</li>
-        <li><a href="../index.html">Toucan 3.1.3 documentation</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="../index.html">Toucan 3.1.3 documentation</a> &raquo;</li> 
       </ul>
     </div>  
 
     <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper">
-          <div class="body">
+          <div class="body" role="main">
             
   <div class="section" id="variables">
 <h1>Variables<a class="headerlink" href="#variables" title="Permalink to this headline">¶</a></h1>
@@ -62,8 +60,8 @@ folder path which changes based on the computer you are currently using.
 Toucan has a number of built in Variables and you can create your own in
 the GUI. Whether user created or built-in a variable can be used
 anywhere Toucan expects a file or folder path, simply wrap the variable
-name in &#64;-signs, for example <tt class="docutils literal"><span class="pre">&#64;docs&#64;</span></tt> or <tt class="docutils literal"><span class="pre">&#64;myvar&#64;</span></tt>. Variables can also be
-nested, for example you can create a Variable that uses <tt class="docutils literal"><span class="pre">&#64;drive&#64;</span></tt> within
+name in &#64;-signs, for example <code class="docutils literal"><span class="pre">&#64;docs&#64;</span></code> or <code class="docutils literal"><span class="pre">&#64;myvar&#64;</span></code>. Variables can also be
+nested, for example you can create a Variable that uses <code class="docutils literal"><span class="pre">&#64;drive&#64;</span></code> within
 it to get the current drive. There is no limit to the depth at which
 they may be created although to ease understanding they should probably
 be limited to two or three levels.</p>
@@ -147,7 +145,7 @@ hand side are buttons to allow you to add and remove these expansions.</p>
 <td>The label from an autorun.inf file, if it exists</td>
 </tr>
 <tr class="row-odd"><td>volumename</td>
-<td>The reverse of the volume variable, i.e. <tt class="docutils literal"><span class="pre">&#64;mydrivevolumename&#64;</span></tt> might map to <tt class="docutils literal"><span class="pre">C:</span></tt></td>
+<td>The reverse of the volume variable, i.e. <code class="docutils literal"><span class="pre">&#64;mydrivevolumename&#64;</span></code> might map to <code class="docutils literal"><span class="pre">C:</span></code></td>
 </tr>
 </tbody>
 </table>
@@ -158,7 +156,7 @@ hand side are buttons to allow you to add and remove these expansions.</p>
           </div>
         </div>
       </div>
-      <div class="sphinxsidebar">
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
             <p class="logo"><a href="../index.html">
               <img class="logo" src="../_static/toucan.png" alt="Logo"/>
@@ -179,12 +177,14 @@ hand side are buttons to allow you to add and remove these expansions.</p>
   <h4>Next topic</h4>
   <p class="topless"><a href="scripts.html"
                         title="next chapter">Scripts</a></p>
-  <h3>This Page</h3>
-  <ul class="this-page-menu">
-    <li><a href="../_sources/ui/variables.txt"
-           rel="nofollow">Show Source</a></li>
-  </ul>
-<div id="searchbox" style="display: none">
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/ui/variables.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
     <form class="search" action="../search.html" method="get">
       <input type="text" name="q" />
@@ -201,7 +201,7 @@ hand side are buttons to allow you to add and remove these expansions.</p>
       </div>
       <div class="clearer"></div>
     </div>
-    <div class="related">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -213,12 +213,12 @@ hand side are buttons to allow you to add and remove these expansions.</p>
         <li class="right" >
           <a href="rules.html" title="Rules"
              >previous</a> |</li>
-        <li><a href="../index.html">Toucan 3.1.3 documentation</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="../index.html">Toucan 3.1.3 documentation</a> &raquo;</li> 
       </ul>
     </div>
-    <div class="footer">
+    <div class="footer" role="contentinfo">
         &copy; Copyright 2013, Steve Lamerton, Alex Tereschenko.
-      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
     </div>
   </body>
 </html>

@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
@@ -10,7 +8,7 @@
     
     <title>Backup &mdash; Toucan 3.1.3 documentation</title>
     
-    <link rel="stylesheet" href="../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     
     <script type="text/javascript">
@@ -29,8 +27,8 @@
     <link rel="next" title="Secure" href="secure.html" />
     <link rel="prev" title="Sync" href="sync.html" /> 
   </head>
-  <body>
-    <div class="related">
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -42,14 +40,14 @@
         <li class="right" >
           <a href="sync.html" title="Sync"
              accesskey="P">previous</a> |</li>
-        <li><a href="../index.html">Toucan 3.1.3 documentation</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="../index.html">Toucan 3.1.3 documentation</a> &raquo;</li> 
       </ul>
     </div>  
 
     <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper">
-          <div class="body">
+          <div class="body" role="main">
             
   <div class="section" id="backup">
 <h1>Backup<a class="headerlink" href="#backup" title="Permalink to this headline">¶</a></h1>
@@ -95,7 +93,12 @@ location specified in the Backup Location.</dd>
 Backup Location. In subsequent runs changes files are backup up in an
 archive named after the date and time. To restore a differential backup
 you need to restore the base file and then the most recent date file.
-Currently this only supports one source folder.</dd>
+Currently this only supports one source folder.
+Please note that if you delete a file from the source folder and you use
+the 7z format, 7-Zip will create a so-called &#8220;anti-item&#8221; in the differential
+backup, a file with the same name and zero size, which will ensure that
+the item from the base backup is deleted upon unpacking, reflecting
+the reality.</dd>
 <dt>Restore</dt>
 <dd>Restores files from an archive into a folder. This works the other way
 on to other the main functions, you add the files to the file list and
@@ -197,7 +200,7 @@ job, or red to show that they have been excluded.</p>
           </div>
         </div>
       </div>
-      <div class="sphinxsidebar">
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
             <p class="logo"><a href="../index.html">
               <img class="logo" src="../_static/toucan.png" alt="Logo"/>
@@ -222,12 +225,14 @@ job, or red to show that they have been excluded.</p>
   <h4>Next topic</h4>
   <p class="topless"><a href="secure.html"
                         title="next chapter">Secure</a></p>
-  <h3>This Page</h3>
-  <ul class="this-page-menu">
-    <li><a href="../_sources/ui/backup.txt"
-           rel="nofollow">Show Source</a></li>
-  </ul>
-<div id="searchbox" style="display: none">
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/ui/backup.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
     <form class="search" action="../search.html" method="get">
       <input type="text" name="q" />
@@ -244,7 +249,7 @@ job, or red to show that they have been excluded.</p>
       </div>
       <div class="clearer"></div>
     </div>
-    <div class="related">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -256,12 +261,12 @@ job, or red to show that they have been excluded.</p>
         <li class="right" >
           <a href="sync.html" title="Sync"
              >previous</a> |</li>
-        <li><a href="../index.html">Toucan 3.1.3 documentation</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="../index.html">Toucan 3.1.3 documentation</a> &raquo;</li> 
       </ul>
     </div>
-    <div class="footer">
+    <div class="footer" role="contentinfo">
         &copy; Copyright 2013, Steve Lamerton, Alex Tereschenko.
-      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
     </div>
   </body>
 </html>
