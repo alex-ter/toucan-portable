@@ -1,33 +1,23 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
-
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    
-    <title>Backup &mdash; Toucan 3.1.3 documentation</title>
-    
+    <title>Backup &#8212; Toucan 3.1.6 documentation</title>
     <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    
-    <script type="text/javascript">
-      var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    '../',
-        VERSION:     '3.1.3',
-        COLLAPSE_INDEX: false,
-        FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true
-      };
-    </script>
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
-    <link rel="top" title="Toucan 3.1.3 documentation" href="../index.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Secure" href="secure.html" />
     <link rel="prev" title="Sync" href="sync.html" /> 
-  </head>
-  <body role="document">
+  </head><body>
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
@@ -40,7 +30,7 @@
         <li class="right" >
           <a href="sync.html" title="Sync"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">Toucan 3.1.3 documentation</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="../index.html">Toucan 3.1.6 documentation</a> &#187;</li> 
       </ul>
     </div>  
 
@@ -95,7 +85,7 @@ archive named after the date and time. To restore a differential backup
 you need to restore the base file and then the most recent date file.
 Currently this only supports one source folder.
 Please note that if you delete a file from the source folder and you use
-the 7z format, 7-Zip will create a so-called &#8220;anti-item&#8221; in the differential
+the 7z format, 7-Zip will create a so-called “anti-item” in the differential
 backup, a file with the same name and zero size, which will ensure that
 the item from the base backup is deleted upon unpacking, reflecting
 the reality.</dd>
@@ -107,7 +97,7 @@ one source file.</dd>
 <dt>Mirror</dt>
 <dd><p class="first">This one is somewhat similar to Update, however it strives to exactly
 mirror the changes in the source files/folders into the Backup Location.
-Specifically, the following 7-Zip options are used: &#8220;-up1q0r2x1y2z1w2&#8221;.
+Specifically, the following 7-Zip options are used: “-up1q0r2x1y2z1w2”.
 Below are details about archive and file actions that translates into.</p>
 <table border="1" class="last docutils">
 <colgroup>
@@ -124,10 +114,10 @@ Below are details about archive and file actions that translates into.</p>
 with wildcard</td>
 <td>File copied from old archive to new</td>
 </tr>
-<tr class="row-odd"><td>File exists in archive, but doesn&#8217;t exist on disk</td>
+<tr class="row-odd"><td>File exists in archive, but doesn’t exist on disk</td>
 <td>File ignored, not added to the new archive</td>
 </tr>
-<tr class="row-even"><td>File doesn&#8217;t exist in archive, but exists on disk</td>
+<tr class="row-even"><td>File doesn’t exist in archive, but exists on disk</td>
 <td>File added from disk to new archive</td>
 </tr>
 <tr class="row-odd"><td>File in archive is newer than the file on disk</td>
@@ -234,15 +224,14 @@ job, or red to show that they have been excluded.</p>
    </div>
 <div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
+    <div class="searchformwrapper">
     <form class="search" action="../search.html" method="get">
       <input type="text" name="q" />
       <input type="submit" value="Go" />
       <input type="hidden" name="check_keywords" value="yes" />
       <input type="hidden" name="area" value="default" />
     </form>
-    <p class="searchtip" style="font-size: 90%">
-    Enter search terms or a module, class or function name.
-    </p>
+    </div>
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script>
         </div>
@@ -261,12 +250,12 @@ job, or red to show that they have been excluded.</p>
         <li class="right" >
           <a href="sync.html" title="Sync"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">Toucan 3.1.3 documentation</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="../index.html">Toucan 3.1.6 documentation</a> &#187;</li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &copy; Copyright 2013, Steve Lamerton, Alex Tereschenko.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
+        &#169; Copyright 2013-2018, Steve Lamerton, Alex Tereschenko.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.7.8.
     </div>
   </body>
 </html>

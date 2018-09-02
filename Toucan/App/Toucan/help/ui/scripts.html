@@ -1,33 +1,23 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
-
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    
-    <title>Scripts &mdash; Toucan 3.1.3 documentation</title>
-    
+    <title>Scripts &#8212; Toucan 3.1.6 documentation</title>
     <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    
-    <script type="text/javascript">
-      var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    '../',
-        VERSION:     '3.1.3',
-        COLLAPSE_INDEX: false,
-        FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true
-      };
-    </script>
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
-    <link rel="top" title="Toucan 3.1.3 documentation" href="../index.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Settings" href="settings.html" />
     <link rel="prev" title="Variables" href="variables.html" /> 
-  </head>
-  <body role="document">
+  </head><body>
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
@@ -40,7 +30,7 @@
         <li class="right" >
           <a href="variables.html" title="Variables"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">Toucan 3.1.3 documentation</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="../index.html">Toucan 3.1.6 documentation</a> &#187;</li> 
       </ul>
     </div>  
 
@@ -76,8 +66,8 @@ from creating scripts.</p>
 <h2>Lua Types<a class="headerlink" href="#lua-types" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="strings">
 <h3>strings<a class="headerlink" href="#strings" title="Permalink to this headline">¶</a></h3>
-<p>In Lua strings can be written in quotes, such as <code class="docutils literal"><span class="pre">&quot;this</span> <span class="pre">is</span> <span class="pre">a</span> <span class="pre">string&quot;</span></code> or
-in double brackets, such as <code class="docutils literal"><span class="pre">[[this</span> <span class="pre">is</span> <span class="pre">also</span> <span class="pre">a</span> <span class="pre">string]]</span></code>. In Toucan it is
+<p>In Lua strings can be written in quotes, such as <code class="docutils literal notranslate"><span class="pre">&quot;this</span> <span class="pre">is</span> <span class="pre">a</span> <span class="pre">string&quot;</span></code> or
+in double brackets, such as <code class="docutils literal notranslate"><span class="pre">[[this</span> <span class="pre">is</span> <span class="pre">also</span> <span class="pre">a</span> <span class="pre">string]]</span></code>. In Toucan it is
 preferable to use the form surrounded by square brackets. This is
 because when in quotes a \ is treated as an escape character and thus
 does not work as expected when writing Windows file paths. One solution
@@ -89,12 +79,12 @@ the square bracket form.</p>
 <p>When Toucan needs a list of strings it uses a table, for example when
 passing a list of paths to be encrypted. The same conditions about
 strings apply when they are in tables, an example of the preferred
-format is <code class="docutils literal"><span class="pre">{[[C:\\path\\one]],</span> <span class="pre">[[&#64;drive&#64;\\path\\two]],</span>
+format is <code class="docutils literal notranslate"><span class="pre">{[[C:\\path\\one]],</span> <span class="pre">[[&#64;drive&#64;\\path\\two]],</span>
 <span class="pre">[[D:\\path\\&#64;date&#64;]]}</span></code> unlike some Lua tables we do not specify an index
 for each value, they have no use to Toucan and as such just clutter the
 function calls.</p>
 <p>Toucan also uses tables when specifying options for Sync and Backup. An
-example Sync map would be <code class="docutils literal"><span class="pre">{size</span> <span class="pre">=</span> <span class="pre">false,</span> <span class="pre">short</span> <span class="pre">=</span> <span class="pre">true}</span></code>. This is
+example Sync map would be <code class="docutils literal notranslate"><span class="pre">{size</span> <span class="pre">=</span> <span class="pre">false,</span> <span class="pre">short</span> <span class="pre">=</span> <span class="pre">true}</span></code>. This is
 technically an associative map. You do not need to set all of the
 attributes when specifying these options and any that you do not will
 take the default values shown on the functions documentation.</p>
@@ -114,7 +104,7 @@ following extra commands:</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>jobname</strong> (<em>string</em>) &#8211; The name of the job</td>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>jobname</strong> (<em>string</em>) – The name of the job</td>
 </tr>
 <tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">none</td>
 </tr>
@@ -124,19 +114,19 @@ following extra commands:</p>
 
 <dl class="function">
 <dt>
-<code class="descname">sync</code><span class="sig-paren">(</span><em>source</em>, <em>dest</em>, <em>function</em>, <em>checks = {size = true</em>, <em>time = false</em>, <em>short = true</em>, <em>full = false}</em>, <em>options = {timestamps = true</em>, <em>attributes = true</em>, <em>ignorero = false</em>, <em>ignoredls = false</em>, <em>recycle = false</em>, <em>previewchanges = false}</em>, <em>rules = &quot;&quot;</em><span class="sig-paren">)</span></dt>
+<code class="descname">sync</code><span class="sig-paren">(</span><em>source</em>, <em>dest</em>, <em>function</em>, <em>checks = {size = true</em>, <em>time = false</em>, <em>short = true</em>, <em>full = false}</em>, <em>options = {timestamps = true</em>, <em>attributes = true</em>, <em>ignorero = false</em>, <em>ignoredls = false</em>, <em>recycle = false</em>, <em>previewchanges = false</em>, <em>noskipped = false}</em>, <em>rules = &quot;&quot;</em><span class="sig-paren">)</span></dt>
 <dd><p>Run a sync with the given options</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>source</strong> (<em>string</em>) &#8211; The source path</li>
-<li><strong>dest</strong> (<em>string</em>) &#8211; The destination path</li>
-<li><strong>function</strong> (<em>string</em>) &#8211; The function to perform, Copy, Mirror, Move, Equalise, Clean</li>
-<li><strong>checks</strong> (<em>table</em>) &#8211; The checks to perform when comparing files</li>
-<li><strong>options</strong> (<em>table</em>) &#8211; The options to use, for more information see</li>
-<li><strong>rules</strong> (<em>string</em>) &#8211; The name of a set of rules</li>
+<li><strong>source</strong> (<em>string</em>) – The source path</li>
+<li><strong>dest</strong> (<em>string</em>) – The destination path</li>
+<li><strong>function</strong> (<em>string</em>) – The function to perform, Copy, Mirror, Move, Equalise, Clean</li>
+<li><strong>checks</strong> (<em>table</em>) – The checks to perform when comparing files</li>
+<li><strong>options</strong> (<em>table</em>) – The options to use, for more information see</li>
+<li><strong>rules</strong> (<em>string</em>) – The name of a set of rules</li>
 </ul>
 </td>
 </tr>
@@ -158,7 +148,7 @@ following extra commands:</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>jobname</strong> (<em>string</em>) &#8211; The name of the job</td>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>jobname</strong> (<em>string</em>) – The name of the job</td>
 </tr>
 <tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">none</td>
 </tr>
@@ -175,12 +165,12 @@ following extra commands:</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>paths</strong> (<em>table</em>) &#8211; The files and folders to archive</li>
-<li><strong>location</strong> (<em>string</em>) &#8211; The location of the archive</li>
-<li><strong>function</strong> (<em>string</em>) &#8211; The function to perform, Complete, Update, Differential, Restore</li>
-<li><strong>ratio</strong> (<em>integer</em>) &#8211; The compression ratio between 0 &amp; 5</li>
-<li><strong>options</strong> (<em>table</em>) &#8211; The options to use, see for more information</li>
-<li><strong>rules</strong> (<em>string</em>) &#8211; The name of a set of rules</li>
+<li><strong>paths</strong> (<em>table</em>) – The files and folders to archive</li>
+<li><strong>location</strong> (<em>string</em>) – The location of the archive</li>
+<li><strong>function</strong> (<em>string</em>) – The function to perform, Complete, Update, Differential, Restore</li>
+<li><strong>ratio</strong> (<em>integer</em>) – The compression ratio between 0 &amp; 5</li>
+<li><strong>options</strong> (<em>table</em>) – The options to use, see for more information</li>
+<li><strong>rules</strong> (<em>string</em>) – The name of a set of rules</li>
 </ul>
 </td>
 </tr>
@@ -202,7 +192,7 @@ following extra commands:</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>jobname</strong> (<em>string</em>) &#8211; The name of the job</td>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>jobname</strong> (<em>string</em>) – The name of the job</td>
 </tr>
 <tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">none</td>
 </tr>
@@ -219,9 +209,9 @@ following extra commands:</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>paths</strong> (<em>table</em>) &#8211; The files and folders to secure</li>
-<li><strong>function</strong> (<em>string</em>) &#8211; Either Encrypt or Decrypt</li>
-<li><strong>rules</strong> (<em>string</em>) &#8211; The name of a set of rules</li>
+<li><strong>paths</strong> (<em>table</em>) – The files and folders to secure</li>
+<li><strong>function</strong> (<em>string</em>) – Either Encrypt or Decrypt</li>
+<li><strong>rules</strong> (<em>string</em>) – The name of a set of rules</li>
 </ul>
 </td>
 </tr>
@@ -244,8 +234,8 @@ following extra commands:</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>message</strong> (<em>string</em>) &#8211; The message</li>
-<li><strong>type</strong> (<em>enum</em>) &#8211; Message type, one of: FinishingLine, FinishingInfo, Message, StartingInfo, StartingLine, Error</li>
+<li><strong>message</strong> (<em>string</em>) – The message</li>
+<li><strong>type</strong> (<em>enum</em>) – Message type, one of: FinishingLine, FinishingInfo, Message, StartingInfo, StartingLine, Error</li>
 </ul>
 </td>
 </tr>
@@ -267,7 +257,7 @@ following extra commands:</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>variable</strong> (<em>string</em>) &#8211; The string to expand</td>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>variable</strong> (<em>string</em>) – The string to expand</td>
 </tr>
 <tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The expansion, or if none was found the original string</td>
 </tr>
@@ -289,7 +279,7 @@ following extra commands:</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>path</strong> &#8211; The path of the file to delete
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>path</strong> – The path of the file to delete
 :type path: string
 :returns: Whether the file was successfully deleted
 :rtype: bool</td>
@@ -311,8 +301,8 @@ and any existing file will be overwritten</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>source</strong> (<em>string</em>) &#8211; The path to the source file</li>
-<li><strong>dest</strong> (<em>string</em>) &#8211; The path that the file should be copied to</li>
+<li><strong>source</strong> (<em>string</em>) – The path to the source file</li>
+<li><strong>dest</strong> (<em>string</em>) – The path that the file should be copied to</li>
 </ul>
 </td>
 </tr>
@@ -339,8 +329,8 @@ and any existing file will be overwritten</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>source</strong> (<em>string</em>) &#8211; The path to the source file</li>
-<li><strong>dest</strong> (<em>string</em>) &#8211; The path that the file should be copied to</li>
+<li><strong>source</strong> (<em>string</em>) – The path to the source file</li>
+<li><strong>dest</strong> (<em>string</em>) – The path that the file should be copied to</li>
 </ul>
 </td>
 </tr>
@@ -367,8 +357,8 @@ and any existing file will be overwritten. This is the same as a copy</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>source</strong> (<em>string</em>) &#8211; The path to the source file</li>
-<li><strong>dest</strong> (<em>string</em>) &#8211; The path that the file should be copied to</li>
+<li><strong>source</strong> (<em>string</em>) – The path to the source file</li>
+<li><strong>dest</strong> (<em>string</em>) – The path that the file should be copied to</li>
 </ul>
 </td>
 </tr>
@@ -395,8 +385,8 @@ program to run</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>path</strong> (<em>string</em>) &#8211; The path to be run</li>
-<li><strong>async</strong> (<em>bool</em>) &#8211; If false the script will wait for the program to finish</li>
+<li><strong>path</strong> (<em>string</em>) – The path to be run</li>
+<li><strong>async</strong> (<em>bool</em>) – If false the script will wait for the program to finish</li>
 </ul>
 </td>
 </tr>
@@ -418,12 +408,12 @@ program to run</p>
 <code class="descname">getscript</code><span class="sig-paren">(</span><em>name</em><span class="sig-paren">)</span></dt>
 <dd><p>Used to get the full path to a saved Toucan script. This can then be
 used to run a script with the following code::
-<code class="docutils literal"><span class="pre">dofile(getscript([[myscriptname]]))</span></code></p>
+<code class="docutils literal notranslate"><span class="pre">dofile(getscript([[myscriptname]]))</span></code></p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>name</strong> (<em>string</em>) &#8211; The name of the script</td>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>name</strong> (<em>string</em>) – The name of the script</td>
 </tr>
 <tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The full path to the script</td>
 </tr>
@@ -529,15 +519,14 @@ used for all subsequent Secure and Backup with password jobs.</p>
    </div>
 <div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
+    <div class="searchformwrapper">
     <form class="search" action="../search.html" method="get">
       <input type="text" name="q" />
       <input type="submit" value="Go" />
       <input type="hidden" name="check_keywords" value="yes" />
       <input type="hidden" name="area" value="default" />
     </form>
-    <p class="searchtip" style="font-size: 90%">
-    Enter search terms or a module, class or function name.
-    </p>
+    </div>
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script>
         </div>
@@ -556,12 +545,12 @@ used for all subsequent Secure and Backup with password jobs.</p>
         <li class="right" >
           <a href="variables.html" title="Variables"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">Toucan 3.1.3 documentation</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="../index.html">Toucan 3.1.6 documentation</a> &#187;</li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &copy; Copyright 2013, Steve Lamerton, Alex Tereschenko.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
+        &#169; Copyright 2013-2018, Steve Lamerton, Alex Tereschenko.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.7.8.
     </div>
   </body>
 </html>
