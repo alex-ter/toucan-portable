@@ -9,10 +9,12 @@
     <title>Sync &#8212; Toucan 3.1.6 documentation</title>
     <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
     <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
+    
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Backup" href="backup.html" />
@@ -147,13 +149,11 @@ is newer than the destination this returns true. The fact that file
 system timestamps are not precise, epsecially on FAT32 and ext3 drives,
 is taken into account.</dd>
 <dt>Short</dt>
-<dd><blockquote class="first">
-<div>This test is a smaller version of the full test below. It checks the
+<dd>This test is a smaller version of the full test below. It checks the
 first and last 1024 bytes of the file. It is ideal when working with
 archives, especially zip files, as they stroe a CRC32 check in this
-space and the test is much quicker than performing a full file. It</div></blockquote>
-<p class="last">also checks the files are of an identical length.</p>
-</dd>
+space and the test is much quicker than performing a full file. It
+also checks the files are of an identical length.</dd>
 <dt>Full</dt>
 <dd>The full test does a byte by byte comparison of both files, reading
 them in small 4kB chunks. If there are no changes then the files are the
@@ -232,7 +232,7 @@ jobs that only contain a few changed files.</dd>
             <p class="logo"><a href="../index.html">
               <img class="logo" src="../_static/toucan.png" alt="Logo"/>
             </a></p>
-  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <h3><a href="../index.html">Table of Contents</a></h3>
   <ul>
 <li><a class="reference internal" href="#">Sync</a><ul>
 <li><a class="reference internal" href="#overview">Overview</a></li>
@@ -290,8 +290,8 @@ jobs that only contain a few changed files.</dd>
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2013-2018, Steve Lamerton, Alex Tereschenko.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.7.8.
+        &#169; Copyright 2013-2019, Steve Lamerton, Alex Tereschenko.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.2.
     </div>
   </body>
 </html>
