@@ -1,19 +1,18 @@
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Changelog &#8212; Toucan 3.1.7 documentation</title>
+    <meta charset="utf-8" />
+    <title>Changelog &#8212; Toucan 3.1.8 documentation</title>
     <link rel="stylesheet" href="_static/classic.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     
-    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-    <script type="text/javascript" src="_static/jquery.js"></script>
-    <script type="text/javascript" src="_static/underscore.js"></script>
-    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
     
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -28,7 +27,7 @@
         <li class="right" >
           <a href="devel/compiling.html" title="Compiling Toucan"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">Toucan 3.1.7 documentation</a> &#187;</li> 
+        <li class="nav-item nav-item-0"><a href="index.html">Toucan 3.1.8 documentation</a> &#187;</li> 
       </ul>
     </div>  
 
@@ -40,311 +39,315 @@
   <div class="section" id="changelog">
 <h1>Changelog<a class="headerlink" href="#changelog" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="id1">
-<h2>3.1.7 (2019-08-13)<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<h2>3.1.8 (2020-05-01)<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>Fixed recursive directory/file deletion in Sync and removed duplicated removal message (<a class="reference external" href="https://github.com/PortableApps/Toucan/issues/22">bug #22</a>)</li>
-<li>Updated bundled 7-Zip binary, it’s version 19.00 now (the latest available)</li>
-<li>Help: corrected formatting in Secure description (thanks d-faure)</li>
+<li><p>Fixed incorrect base file name in differential mode (<a class="reference external" href="https://github.com/PortableApps/Toucan/issues/28">bug #28</a>)</p></li>
+<li><p>Translations: updated JP translation (thanks maboroshin)</p></li>
 </ul>
 </div>
 <div class="section" id="id2">
-<h2>3.1.6 (2018-09-02)<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<h2>3.1.7 (2019-08-13)<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>Fixed an exception appearing when switching languages (<a class="reference external" href="https://github.com/PortableApps/Toucan/issues/16">bug #16</a>)</li>
-<li>Added an option for not logging the “Skipped” sync messages (forum request and <a class="reference external" href="https://github.com/PortableApps/Toucan/issues/15">bug #15</a>)</li>
-<li>Updated bundled 7-Zip binary, it’s version 18.05 now (the latest available)</li>
-<li>Translations: updated DE and IT translations (thanks marwelix and eagleman)</li>
+<li><p>Fixed recursive directory/file deletion in Sync and removed duplicated removal message (<a class="reference external" href="https://github.com/PortableApps/Toucan/issues/22">bug #22</a>)</p></li>
+<li><p>Updated bundled 7-Zip binary, it’s version 19.00 now (the latest available)</p></li>
+<li><p>Help: corrected formatting in Secure description (thanks d-faure)</p></li>
 </ul>
 </div>
 <div class="section" id="id3">
-<h2>3.1.5 (2017-06-17)<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<h2>3.1.6 (2018-09-02)<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>Toucan main executable now isn’t compressed and is dynamically linked to C/C++ runtime,
-libraries are supplied within the installer. This is to follow the PortableApps
-main team’s approach and avoid antivirus false-positives.</li>
+<li><p>Fixed an exception appearing when switching languages (<a class="reference external" href="https://github.com/PortableApps/Toucan/issues/16">bug #16</a>)</p></li>
+<li><p>Added an option for not logging the “Skipped” sync messages (forum request and <a class="reference external" href="https://github.com/PortableApps/Toucan/issues/15">bug #15</a>)</p></li>
+<li><p>Updated bundled 7-Zip binary, it’s version 18.05 now (the latest available)</p></li>
+<li><p>Translations: updated DE and IT translations (thanks marwelix and eagleman)</p></li>
 </ul>
 </div>
 <div class="section" id="id4">
-<h2>3.1.4 (2016-06-19)<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+<h2>3.1.5 (2017-06-17)<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>Toucan is still alive! :)</li>
-<li>documentation: fixed command line parameters description (<a class="reference external" href="https://github.com/PortableApps/Toucan/issues/1">bug #1</a>)</li>
-<li>documentation: added description of “anti-items” (<a class="reference external" href="https://github.com/PortableApps/Toucan/issues/4">bug #4</a>)</li>
-<li>scripts: fixed print command and exposed all message types available internally (<a class="reference external" href="https://github.com/PortableApps/Toucan/issues/8">bug #8</a>)</li>
-<li>backup: fixed job stdout polling logic to capture quick ones (<a class="reference external" href="https://github.com/PortableApps/Toucan/issues/3">bug #3</a>)</li>
-<li>backup: fixed ratio slider text not updating upon app start</li>
-<li>translations: refreshed all PO files, updated RU and PL ones</li>
-<li>translations: updated IT translation (eagleman)</li>
+<li><p>Toucan main executable now isn’t compressed and is dynamically linked to C/C++ runtime,
+libraries are supplied within the installer. This is to follow the PortableApps
+main team’s approach and avoid antivirus false-positives.</p></li>
 </ul>
 </div>
 <div class="section" id="id5">
-<h2>3.1.3 (2014-01-19)<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
+<h2>3.1.4 (2016-06-19)<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>Fixed “–log” option not working when used with non-GUI mode (<a class="reference external" href="https://sourceforge.net/p/alt-toucan/tickets/7/">SF bug #7</a>)</li>
-<li>Minor documentation fixes (Toucan version strings mostly)</li>
+<li><p>Toucan is still alive! :)</p></li>
+<li><p>documentation: fixed command line parameters description (<a class="reference external" href="https://github.com/PortableApps/Toucan/issues/1">bug #1</a>)</p></li>
+<li><p>documentation: added description of “anti-items” (<a class="reference external" href="https://github.com/PortableApps/Toucan/issues/4">bug #4</a>)</p></li>
+<li><p>scripts: fixed print command and exposed all message types available internally (<a class="reference external" href="https://github.com/PortableApps/Toucan/issues/8">bug #8</a>)</p></li>
+<li><p>backup: fixed job stdout polling logic to capture quick ones (<a class="reference external" href="https://github.com/PortableApps/Toucan/issues/3">bug #3</a>)</p></li>
+<li><p>backup: fixed ratio slider text not updating upon app start</p></li>
+<li><p>translations: refreshed all PO files, updated RU and PL ones</p></li>
+<li><p>translations: updated IT translation (eagleman)</p></li>
 </ul>
 </div>
 <div class="section" id="id6">
-<h2>3.1.2 (2013-11-17)<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h2>
+<h2>3.1.3 (2014-01-19)<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>Fixed wxWidgets assert being triggered when a whole drive was added
-to a backup selection (<a class="reference external" href="https://sourceforge.net/p/alt-toucan/tickets/6/">SF bug #6</a>)</li>
-<li>Fixed bug with UI looking flat like Win95 even on newer OSes with themes enabled (<a class="reference external" href="https://sourceforge.net/p/alt-toucan/tickets/4/">SF bug #4</a>)</li>
+<li><p>Fixed “–log” option not working when used with non-GUI mode (<a class="reference external" href="https://sourceforge.net/p/alt-toucan/tickets/7/">SF bug #7</a>)</p></li>
+<li><p>Minor documentation fixes (Toucan version strings mostly)</p></li>
 </ul>
 </div>
 <div class="section" id="id7">
-<h2>3.1.1 (2013-09-22)<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h2>
+<h2>3.1.2 (2013-11-17)<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>Fixed bug with Backup in Complete or Update modes
-only including the first source file/dir into the resulting archive (<a class="reference external" href="https://sourceforge.net/p/alt-toucan/tickets/2/">SF bug #2</a>)</li>
-<li>Added description of Mirror mode for Backup into documenation (<a class="reference external" href="https://sourceforge.net/p/alt-toucan/tickets/1/">SF bug #1</a>)</li>
-<li>Fixed several error handling cases for Restore mode (errors were triggered when not needed and vice versa)</li>
+<li><p>Fixed wxWidgets assert being triggered when a whole drive was added
+to a backup selection (<a class="reference external" href="https://sourceforge.net/p/alt-toucan/tickets/6/">SF bug #6</a>)</p></li>
+<li><p>Fixed bug with UI looking flat like Win95 even on newer OSes with themes enabled (<a class="reference external" href="https://sourceforge.net/p/alt-toucan/tickets/4/">SF bug #4</a>)</p></li>
 </ul>
 </div>
 <div class="section" id="id8">
-<h2>3.1<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h2>
+<h2>3.1.1 (2013-09-22)<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li><dl class="first docutils">
-<dt>Improved Rules support, including</dt>
-<dd><ul class="first last">
-<li>Improved validation</li>
-<li>A new interface</li>
-<li>Wildcard support in the Simple type</li>
-<li>Seperate file and folder includes</li>
-<li>Absolute excludes</li>
-</ul>
-</dd>
-</dl>
-</li>
-<li>Username variable</li>
-<li>Improved input validation</li>
-<li>Tooltips everywhere</li>
-<li><dl class="first docutils">
-<dt>Improved progress display</dt>
-<dd><ul class="first last">
-<li>Fixed command line output</li>
-<li>Improved UI responsivness</li>
-<li>Autoscroll toggle added</li>
-<li>UI now saves position and size</li>
-</ul>
-</dd>
-</dl>
-</li>
-<li><dl class="first docutils">
-<dt>Scripting interface improvements</dt>
-<dd><ul class="first last">
-<li>Undo and redo buttons</li>
-<li>Interface to add existing jobs and commands</li>
-</ul>
-</dd>
-</dl>
-</li>
-<li>Long path support in sync</li>
-<li>UNC path support in sync</li>
-<li>Long UNC path support in sync</li>
+<li><p>Fixed bug with Backup in Complete or Update modes
+only including the first source file/dir into the resulting archive (<a class="reference external" href="https://sourceforge.net/p/alt-toucan/tickets/2/">SF bug #2</a>)</p></li>
+<li><p>Added description of Mirror mode for Backup into documenation (<a class="reference external" href="https://sourceforge.net/p/alt-toucan/tickets/1/">SF bug #1</a>)</p></li>
+<li><p>Fixed several error handling cases for Restore mode (errors were triggered when not needed and vice versa)</p></li>
 </ul>
 </div>
 <div class="section" id="id9">
-<h2>3.0.4 (2010-11-30)<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h2>
+<h2>3.1<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>Bug fixes</li>
+<li><dl class="simple">
+<dt>Improved Rules support, including</dt><dd><ul>
+<li><p>Improved validation</p></li>
+<li><p>A new interface</p></li>
+<li><p>Wildcard support in the Simple type</p></li>
+<li><p>Seperate file and folder includes</p></li>
+<li><p>Absolute excludes</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p>Username variable</p></li>
+<li><p>Improved input validation</p></li>
+<li><p>Tooltips everywhere</p></li>
+<li><dl class="simple">
+<dt>Improved progress display</dt><dd><ul>
+<li><p>Fixed command line output</p></li>
+<li><p>Improved UI responsivness</p></li>
+<li><p>Autoscroll toggle added</p></li>
+<li><p>UI now saves position and size</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Scripting interface improvements</dt><dd><ul>
+<li><p>Undo and redo buttons</p></li>
+<li><p>Interface to add existing jobs and commands</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p>Long path support in sync</p></li>
+<li><p>UNC path support in sync</p></li>
+<li><p>Long UNC path support in sync</p></li>
 </ul>
 </div>
 <div class="section" id="id10">
-<h2>3.0.3 (2010-09-26)<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h2>
+<h2>3.0.4 (2010-11-30)<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>Bug fixes</li>
-<li>New date and time variables</li>
+<li><p>Bug fixes</p></li>
 </ul>
 </div>
 <div class="section" id="id11">
-<h2>3.0.2 (2010-07-22)<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h2>
+<h2>3.0.3 (2010-09-26)<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>Bug fixes</li>
+<li><p>Bug fixes</p></li>
+<li><p>New date and time variables</p></li>
 </ul>
 </div>
 <div class="section" id="id12">
-<h2>3.0.1 (2010-06-17)<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h2>
+<h2>3.0.2 (2010-07-22)<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>Bug fixes</li>
-<li>Help file improvements</li>
-<li>Dutch translation updated</li>
+<li><p>Bug fixes</p></li>
 </ul>
 </div>
 <div class="section" id="id13">
-<h2>3.0 (2010-06-17)<a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h2>
+<h2>3.0.1 (2010-06-17)<a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>A brand new scripting back-end using Lua</li>
-<li>Many Sync engine improvements</li>
-<li>Lots of new options</li>
-<li>Support for long file paths in Windows</li>
-<li>Completely overhauled command line interface</li>
-<li>Improved threading</li>
-<li>Updated folder creation</li>
-<li>Updated languages</li>
-<li>Georgian language support added</li>
+<li><p>Bug fixes</p></li>
+<li><p>Help file improvements</p></li>
+<li><p>Dutch translation updated</p></li>
 </ul>
 </div>
 <div class="section" id="id14">
-<h2>2.2.1 (2009-12-07)<a class="headerlink" href="#id14" title="Permalink to this headline">¶</a></h2>
+<h2>3.0 (2010-06-17)<a class="headerlink" href="#id14" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>Bug fixes</li>
-<li>Improved language support</li>
+<li><p>A brand new scripting back-end using Lua</p></li>
+<li><p>Many Sync engine improvements</p></li>
+<li><p>Lots of new options</p></li>
+<li><p>Support for long file paths in Windows</p></li>
+<li><p>Completely overhauled command line interface</p></li>
+<li><p>Improved threading</p></li>
+<li><p>Updated folder creation</p></li>
+<li><p>Updated languages</p></li>
+<li><p>Georgian language support added</p></li>
 </ul>
 </div>
 <div class="section" id="id15">
-<h2>2.2.0 (2009-11-03)<a class="headerlink" href="#id15" title="Permalink to this headline">¶</a></h2>
+<h2>2.2.1 (2009-12-07)<a class="headerlink" href="#id15" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>Improved saved data handling</li>
-<li>Data files transitioned to English</li>
-<li>Refresh buttons added</li>
-<li>Backup and Secure now live preview</li>
-<li>Sync user interface improvements</li>
-<li>New Rules user interface</li>
-<li>New Rules entry dialog</li>
-<li>New password entry dialog</li>
-<li>Many bug fixes</li>
-<li>Improved variable normalisation</li>
-<li>Memory usage reduced</li>
-<li>Program size reduced</li>
-<li>Drive labels supported as variables</li>
-<li>Swedish and Greek languages added</li>
-<li>Many translation updates</li>
+<li><p>Bug fixes</p></li>
+<li><p>Improved language support</p></li>
 </ul>
 </div>
 <div class="section" id="id16">
-<h2>2.1.2 (2009-07-29)<a class="headerlink" href="#id16" title="Permalink to this headline">¶</a></h2>
+<h2>2.2.0 (2009-11-03)<a class="headerlink" href="#id16" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>Improved support for small screens</li>
-<li>User interface consistency improved</li>
-<li>Helpfile updates</li>
-<li>Many bug fixes</li>
+<li><p>Improved saved data handling</p></li>
+<li><p>Data files transitioned to English</p></li>
+<li><p>Refresh buttons added</p></li>
+<li><p>Backup and Secure now live preview</p></li>
+<li><p>Sync user interface improvements</p></li>
+<li><p>New Rules user interface</p></li>
+<li><p>New Rules entry dialog</p></li>
+<li><p>New password entry dialog</p></li>
+<li><p>Many bug fixes</p></li>
+<li><p>Improved variable normalisation</p></li>
+<li><p>Memory usage reduced</p></li>
+<li><p>Program size reduced</p></li>
+<li><p>Drive labels supported as variables</p></li>
+<li><p>Swedish and Greek languages added</p></li>
+<li><p>Many translation updates</p></li>
 </ul>
 </div>
 <div class="section" id="id17">
-<h2>2.1.1 (2009-07-05)<a class="headerlink" href="#id17" title="Permalink to this headline">¶</a></h2>
+<h2>2.1.2 (2009-07-29)<a class="headerlink" href="#id17" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>Settings can be applied without a restart</li>
-<li>Helpfile updates</li>
-<li>Errors now highlighted red</li>
-<li>Tool-tips have been added</li>
-<li>Many bug fixes</li>
+<li><p>Improved support for small screens</p></li>
+<li><p>User interface consistency improved</p></li>
+<li><p>Helpfile updates</p></li>
+<li><p>Many bug fixes</p></li>
 </ul>
 </div>
 <div class="section" id="id18">
-<h2>2.1.0 (2009-05-17)<a class="headerlink" href="#id18" title="Permalink to this headline">¶</a></h2>
+<h2>2.1.1 (2009-07-05)<a class="headerlink" href="#id18" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>New progress window</li>
-<li>New Sync engine</li>
-<li>Visual finished notification</li>
-<li>Command line output logging</li>
-<li>Many bug fixes</li>
-<li>Code moved to Mercurial</li>
-<li>Added Japanese, Simplified Chinese</li>
+<li><p>Settings can be applied without a restart</p></li>
+<li><p>Helpfile updates</p></li>
+<li><p>Errors now highlighted red</p></li>
+<li><p>Tool-tips have been added</p></li>
+<li><p>Many bug fixes</p></li>
 </ul>
 </div>
 <div class="section" id="id19">
-<h2>2.0.7 (2009-03-07)<a class="headerlink" href="#id19" title="Permalink to this headline">¶</a></h2>
+<h2>2.1.0 (2009-05-17)<a class="headerlink" href="#id19" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>Multiple bug fixes</li>
+<li><p>New progress window</p></li>
+<li><p>New Sync engine</p></li>
+<li><p>Visual finished notification</p></li>
+<li><p>Command line output logging</p></li>
+<li><p>Many bug fixes</p></li>
+<li><p>Code moved to Mercurial</p></li>
+<li><p>Added Japanese, Simplified Chinese</p></li>
 </ul>
 </div>
 <div class="section" id="id20">
-<h2>2.0.6 (2009-02-21)<a class="headerlink" href="#id20" title="Permalink to this headline">¶</a></h2>
+<h2>2.0.7 (2009-03-07)<a class="headerlink" href="#id20" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>Fix for crash on certain Windows XP computers</li>
+<li><p>Multiple bug fixes</p></li>
 </ul>
 </div>
 <div class="section" id="id21">
-<h2>2.0.5 (2009-02-20)<a class="headerlink" href="#id21" title="Permalink to this headline">¶</a></h2>
+<h2>2.0.6 (2009-02-21)<a class="headerlink" href="#id21" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>New help file</li>
-<li>Tab rename</li>
-<li>Start up speed increase</li>
-<li>Portuguese, Portuguese (Brazilian), Turkish and Czech added</li>
-<li>Remember entered information options</li>
-<li>Rules system updated</li>
-<li>Multiple bug fixes</li>
-<li>Updated installer</li>
+<li><p>Fix for crash on certain Windows XP computers</p></li>
 </ul>
 </div>
 <div class="section" id="id22">
-<h2>2.0.4 (2009-01-15)<a class="headerlink" href="#id22" title="Permalink to this headline">¶</a></h2>
+<h2>2.0.5 (2009-02-20)<a class="headerlink" href="#id22" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>Bug fixes</li>
-<li>User interface Improvements</li>
-<li>Code re-factoring and reduction</li>
-<li>Added &#64;volume&#64; variable</li>
-<li>Added Italian and Chinese</li>
+<li><p>New help file</p></li>
+<li><p>Tab rename</p></li>
+<li><p>Start up speed increase</p></li>
+<li><p>Portuguese, Portuguese (Brazilian), Turkish and Czech added</p></li>
+<li><p>Remember entered information options</p></li>
+<li><p>Rules system updated</p></li>
+<li><p>Multiple bug fixes</p></li>
+<li><p>Updated installer</p></li>
 </ul>
 </div>
 <div class="section" id="id23">
-<h2>2.0.3 (2008-12-02)<a class="headerlink" href="#id23" title="Permalink to this headline">¶</a></h2>
+<h2>2.0.4 (2009-01-15)<a class="headerlink" href="#id23" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>Bug fixes</li>
-<li>User interface Improvements</li>
+<li><p>Bug fixes</p></li>
+<li><p>User interface Improvements</p></li>
+<li><p>Code re-factoring and reduction</p></li>
+<li><p>Added &#64;volume&#64; variable</p></li>
+<li><p>Added Italian and Chinese</p></li>
 </ul>
 </div>
 <div class="section" id="id24">
-<h2>2.0.2 (2008-11-10)<a class="headerlink" href="#id24" title="Permalink to this headline">¶</a></h2>
+<h2>2.0.3 (2008-12-02)<a class="headerlink" href="#id24" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>Bug fixes</li>
-<li>Sync speed improvements</li>
-<li>Added Bulgarian</li>
+<li><p>Bug fixes</p></li>
+<li><p>User interface Improvements</p></li>
 </ul>
 </div>
 <div class="section" id="id25">
-<h2>2.0.1 (2008-09-10)<a class="headerlink" href="#id25" title="Permalink to this headline">¶</a></h2>
+<h2>2.0.2 (2008-11-10)<a class="headerlink" href="#id25" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>Bug fixes</li>
-<li>User interface Improvements</li>
-<li>Added Polish and Hungarian</li>
+<li><p>Bug fixes</p></li>
+<li><p>Sync speed improvements</p></li>
+<li><p>Added Bulgarian</p></li>
 </ul>
 </div>
 <div class="section" id="id26">
-<h2>2.0 (2008-08-13)<a class="headerlink" href="#id26" title="Permalink to this headline">¶</a></h2>
+<h2>2.0.1 (2008-09-10)<a class="headerlink" href="#id26" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>New user interface</li>
-<li>Japanese removed</li>
-<li>Blowfish removed</li>
+<li><p>Bug fixes</p></li>
+<li><p>User interface Improvements</p></li>
+<li><p>Added Polish and Hungarian</p></li>
 </ul>
 </div>
 <div class="section" id="id27">
-<h2>1.2.2 (2008-04-11)<a class="headerlink" href="#id27" title="Permalink to this headline">¶</a></h2>
+<h2>2.0 (2008-08-13)<a class="headerlink" href="#id27" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>Bug fixes</li>
-<li>Folder time stamp syncing</li>
-<li>Added Spanish, Japanese and Estonian</li>
+<li><p>New user interface</p></li>
+<li><p>Japanese removed</p></li>
+<li><p>Blowfish removed</p></li>
 </ul>
 </div>
 <div class="section" id="id28">
-<h2>1.2.1.1 (2008-02-28)<a class="headerlink" href="#id28" title="Permalink to this headline">¶</a></h2>
+<h2>1.2.2 (2008-04-11)<a class="headerlink" href="#id28" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>Fixed infinite loop bug</li>
+<li><p>Bug fixes</p></li>
+<li><p>Folder time stamp syncing</p></li>
+<li><p>Added Spanish, Japanese and Estonian</p></li>
 </ul>
 </div>
 <div class="section" id="id29">
-<h2>1.2.1 (2008-02-11)<a class="headerlink" href="#id29" title="Permalink to this headline">¶</a></h2>
+<h2>1.2.1.1 (2008-02-28)<a class="headerlink" href="#id29" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>Bug fixes</li>
-<li>Improved exclusions</li>
-<li>Improved command line</li>
-<li>Added Dutch</li>
+<li><p>Fixed infinite loop bug</p></li>
 </ul>
 </div>
 <div class="section" id="id30">
-<h2>1.2 (2007-11-21)<a class="headerlink" href="#id30" title="Permalink to this headline">¶</a></h2>
+<h2>1.2.1 (2008-02-11)<a class="headerlink" href="#id30" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>AES added</li>
-<li>Drag and drop support added</li>
-<li>Bug fixes</li>
-<li>Added French and German</li>
+<li><p>Bug fixes</p></li>
+<li><p>Improved exclusions</p></li>
+<li><p>Improved command line</p></li>
+<li><p>Added Dutch</p></li>
 </ul>
 </div>
 <div class="section" id="id31">
-<h2>1.1 (2007-08-01)<a class="headerlink" href="#id31" title="Permalink to this headline">¶</a></h2>
+<h2>1.2 (2007-11-21)<a class="headerlink" href="#id31" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>Initial release</li>
+<li><p>AES added</p></li>
+<li><p>Drag and drop support added</p></li>
+<li><p>Bug fixes</p></li>
+<li><p>Added French and German</p></li>
+</ul>
+</div>
+<div class="section" id="id32">
+<h2>1.1 (2007-08-01)<a class="headerlink" href="#id32" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Initial release</p></li>
 </ul>
 </div>
 </div>
@@ -361,37 +364,38 @@ only including the first source file/dir into the resulting archive (<a class="r
   <h3><a href="index.html">Table of Contents</a></h3>
   <ul>
 <li><a class="reference internal" href="#">Changelog</a><ul>
-<li><a class="reference internal" href="#id1">3.1.7 (2019-08-13)</a></li>
-<li><a class="reference internal" href="#id2">3.1.6 (2018-09-02)</a></li>
-<li><a class="reference internal" href="#id3">3.1.5 (2017-06-17)</a></li>
-<li><a class="reference internal" href="#id4">3.1.4 (2016-06-19)</a></li>
-<li><a class="reference internal" href="#id5">3.1.3 (2014-01-19)</a></li>
-<li><a class="reference internal" href="#id6">3.1.2 (2013-11-17)</a></li>
-<li><a class="reference internal" href="#id7">3.1.1 (2013-09-22)</a></li>
-<li><a class="reference internal" href="#id8">3.1</a></li>
-<li><a class="reference internal" href="#id9">3.0.4 (2010-11-30)</a></li>
-<li><a class="reference internal" href="#id10">3.0.3 (2010-09-26)</a></li>
-<li><a class="reference internal" href="#id11">3.0.2 (2010-07-22)</a></li>
-<li><a class="reference internal" href="#id12">3.0.1 (2010-06-17)</a></li>
-<li><a class="reference internal" href="#id13">3.0 (2010-06-17)</a></li>
-<li><a class="reference internal" href="#id14">2.2.1 (2009-12-07)</a></li>
-<li><a class="reference internal" href="#id15">2.2.0 (2009-11-03)</a></li>
-<li><a class="reference internal" href="#id16">2.1.2 (2009-07-29)</a></li>
-<li><a class="reference internal" href="#id17">2.1.1 (2009-07-05)</a></li>
-<li><a class="reference internal" href="#id18">2.1.0 (2009-05-17)</a></li>
-<li><a class="reference internal" href="#id19">2.0.7 (2009-03-07)</a></li>
-<li><a class="reference internal" href="#id20">2.0.6 (2009-02-21)</a></li>
-<li><a class="reference internal" href="#id21">2.0.5 (2009-02-20)</a></li>
-<li><a class="reference internal" href="#id22">2.0.4 (2009-01-15)</a></li>
-<li><a class="reference internal" href="#id23">2.0.3 (2008-12-02)</a></li>
-<li><a class="reference internal" href="#id24">2.0.2 (2008-11-10)</a></li>
-<li><a class="reference internal" href="#id25">2.0.1 (2008-09-10)</a></li>
-<li><a class="reference internal" href="#id26">2.0 (2008-08-13)</a></li>
-<li><a class="reference internal" href="#id27">1.2.2 (2008-04-11)</a></li>
-<li><a class="reference internal" href="#id28">1.2.1.1 (2008-02-28)</a></li>
-<li><a class="reference internal" href="#id29">1.2.1 (2008-02-11)</a></li>
-<li><a class="reference internal" href="#id30">1.2 (2007-11-21)</a></li>
-<li><a class="reference internal" href="#id31">1.1 (2007-08-01)</a></li>
+<li><a class="reference internal" href="#id1">3.1.8 (2020-05-01)</a></li>
+<li><a class="reference internal" href="#id2">3.1.7 (2019-08-13)</a></li>
+<li><a class="reference internal" href="#id3">3.1.6 (2018-09-02)</a></li>
+<li><a class="reference internal" href="#id4">3.1.5 (2017-06-17)</a></li>
+<li><a class="reference internal" href="#id5">3.1.4 (2016-06-19)</a></li>
+<li><a class="reference internal" href="#id6">3.1.3 (2014-01-19)</a></li>
+<li><a class="reference internal" href="#id7">3.1.2 (2013-11-17)</a></li>
+<li><a class="reference internal" href="#id8">3.1.1 (2013-09-22)</a></li>
+<li><a class="reference internal" href="#id9">3.1</a></li>
+<li><a class="reference internal" href="#id10">3.0.4 (2010-11-30)</a></li>
+<li><a class="reference internal" href="#id11">3.0.3 (2010-09-26)</a></li>
+<li><a class="reference internal" href="#id12">3.0.2 (2010-07-22)</a></li>
+<li><a class="reference internal" href="#id13">3.0.1 (2010-06-17)</a></li>
+<li><a class="reference internal" href="#id14">3.0 (2010-06-17)</a></li>
+<li><a class="reference internal" href="#id15">2.2.1 (2009-12-07)</a></li>
+<li><a class="reference internal" href="#id16">2.2.0 (2009-11-03)</a></li>
+<li><a class="reference internal" href="#id17">2.1.2 (2009-07-29)</a></li>
+<li><a class="reference internal" href="#id18">2.1.1 (2009-07-05)</a></li>
+<li><a class="reference internal" href="#id19">2.1.0 (2009-05-17)</a></li>
+<li><a class="reference internal" href="#id20">2.0.7 (2009-03-07)</a></li>
+<li><a class="reference internal" href="#id21">2.0.6 (2009-02-21)</a></li>
+<li><a class="reference internal" href="#id22">2.0.5 (2009-02-20)</a></li>
+<li><a class="reference internal" href="#id23">2.0.4 (2009-01-15)</a></li>
+<li><a class="reference internal" href="#id24">2.0.3 (2008-12-02)</a></li>
+<li><a class="reference internal" href="#id25">2.0.2 (2008-11-10)</a></li>
+<li><a class="reference internal" href="#id26">2.0.1 (2008-09-10)</a></li>
+<li><a class="reference internal" href="#id27">2.0 (2008-08-13)</a></li>
+<li><a class="reference internal" href="#id28">1.2.2 (2008-04-11)</a></li>
+<li><a class="reference internal" href="#id29">1.2.1.1 (2008-02-28)</a></li>
+<li><a class="reference internal" href="#id30">1.2.1 (2008-02-11)</a></li>
+<li><a class="reference internal" href="#id31">1.2 (2007-11-21)</a></li>
+<li><a class="reference internal" href="#id32">1.1 (2007-08-01)</a></li>
 </ul>
 </li>
 </ul>
@@ -407,17 +411,15 @@ only including the first source file/dir into the resulting archive (<a class="r
     </ul>
    </div>
 <div id="searchbox" style="display: none" role="search">
-  <h3>Quick search</h3>
+  <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="search.html" method="get">
-      <input type="text" name="q" />
+      <input type="text" name="q" aria-labelledby="searchlabel" />
       <input type="submit" value="Go" />
-      <input type="hidden" name="check_keywords" value="yes" />
-      <input type="hidden" name="area" value="default" />
     </form>
     </div>
 </div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
+<script>$('#searchbox').show(0);</script>
         </div>
       </div>
       <div class="clearer"></div>
@@ -431,12 +433,12 @@ only including the first source file/dir into the resulting archive (<a class="r
         <li class="right" >
           <a href="devel/compiling.html" title="Compiling Toucan"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">Toucan 3.1.7 documentation</a> &#187;</li> 
+        <li class="nav-item nav-item-0"><a href="index.html">Toucan 3.1.8 documentation</a> &#187;</li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2013-2019, Steve Lamerton, Alex Tereschenko.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.2.
+        &#169; Copyright 2013-2020, Steve Lamerton, Alex Tereschenko.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.3.
     </div>
   </body>
 </html>

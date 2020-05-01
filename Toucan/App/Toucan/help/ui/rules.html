@@ -1,19 +1,18 @@
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Rules &#8212; Toucan 3.1.7 documentation</title>
+    <meta charset="utf-8" />
+    <title>Rules &#8212; Toucan 3.1.8 documentation</title>
     <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     
-    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-    <script type="text/javascript" src="../_static/jquery.js"></script>
-    <script type="text/javascript" src="../_static/underscore.js"></script>
-    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
     
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -32,7 +31,7 @@
         <li class="right" >
           <a href="secure.html" title="Secure"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">Toucan 3.1.7 documentation</a> &#187;</li> 
+        <li class="nav-item nav-item-0"><a href="../index.html">Toucan 3.1.8 documentation</a> &#187;</li> 
       </ul>
     </div>  
 
@@ -53,70 +52,73 @@ include specific files and folders that you are interested in. There
 are three different type of rules in Toucan which are explained
 below.</p>
 <ul class="simple">
-<li>Files to exclude - Any files that you wish to exclude belong in
-this category. It accepts a number of different types of input.<ul>
-<li>Plain text - By default matching is performed as a simple
+<li><p>Files to exclude - Any files that you wish to exclude belong in
+this category. It accepts a number of different types of input.</p>
+<ul>
+<li><p>Plain text - By default matching is performed as a simple
 plain text match, i.e. if the text you use as an exclusion can be
-found anywhere in the path Toucan is checking it will be excluded.</li>
-<li>Regex - If you prefix your exclusion with an asterisk (*)
+found anywhere in the path Toucan is checking it will be excluded.</p></li>
+<li><p>Regex - If you prefix your exclusion with an asterisk (*)
 then the rest of the exclusion will be treated as a regex. If the
 regex then matches the path it will be excluded. For information
 about the syntax used please see the
-<a class="reference external" href="http://docs.wxwidgets.org/stable/wx_wxresyn.html">wxWidgets website</a>.</li>
-<li>File size - To exclude files based on their size you need to
+<a class="reference external" href="http://docs.wxwidgets.org/stable/wx_wxresyn.html">wxWidgets website</a>.</p></li>
+<li><p>File size - To exclude files based on their size you need to
 begin your exclusion with either &gt; or &lt; and suffix it with B, kB,
 MB or GB with a number in the middle. For example &gt;10GB will
 exclude files that are larger than 10 gigabytes and &lt;1MB will
-exclude files smaller than 1 megabyte.</li>
-<li>Modified time - If you want to exclude a file based on the time
+exclude files smaller than 1 megabyte.</p></li>
+<li><p>Modified time - If you want to exclude a file based on the time
 it was modified then you need to prefix a date with either &lt; if you
 want to exclude files earlier than it or &gt; if you want to exclude
-files later than it.</li>
+files later than it.</p></li>
 </ul>
 </li>
-<li>Folders to exclude - Any folder you wish to exclude belong in
+<li><p>Folders to exclude - Any folder you wish to exclude belong in
 this category, please note all sub-files / sub-folders are also
-excluded. It accepts two types of input.<ul>
-<li>Plain text - By default matching is performed as a simple
+excluded. It accepts two types of input.</p>
+<ul>
+<li><p>Plain text - By default matching is performed as a simple
 plain text match, i.e. if the text you use as an exclusion can be
-found anywhere in the path Toucan is checking it will be excluded.</li>
-<li>Regex - If you prefix your exclusion with an asterisk ({*})
+found anywhere in the path Toucan is checking it will be excluded.</p></li>
+<li><p>Regex - If you prefix your exclusion with an asterisk ({*})
 then the rest of the exclusion will be treated as a regex. If the
 regex then matches the path it will be excluded. For information
 about the surtax used please see the
-<a class="reference external" href="http://docs.wxwidgets.org/stable/wx_wxresyn.html">wxWidgets website</a>.</li>
+<a class="reference external" href="http://docs.wxwidgets.org/stable/wx_wxresyn.html">wxWidgets website</a>.</p></li>
 </ul>
 </li>
-<li>Locations it include - If you have previous excluded a folder
+<li><p>Locations it include - If you have previous excluded a folder
 but you still wish some of its contents to be included you can add
 them as locations to include. Both files and folders are accepted
-although only plain text and regex matching is supported.<ul>
-<li>Plain text - By default matching is performed as a simple
+although only plain text and regex matching is supported.</p>
+<ul>
+<li><p>Plain text - By default matching is performed as a simple
 plain text match, i.e. if the text you use as an exclusion can be
-found anywhere in the path Toucan is checking it will be excluded.</li>
-<li>Regex - If you prefix your exclusion with an asterisk ({*})
+found anywhere in the path Toucan is checking it will be excluded.</p></li>
+<li><p>Regex - If you prefix your exclusion with an asterisk ({*})
 then the rest of the exclusion will be treated as a regex. If the
 regex then matches the path it will be excluded. For information
 about the surtax used please see the
-<a class="reference external" href="http://docs.wxwidgets.org/stable/wx_wxresyn.html">wxWidgets website</a>.</li>
+<a class="reference external" href="http://docs.wxwidgets.org/stable/wx_wxresyn.html">wxWidgets website</a>.</p></li>
 </ul>
 </li>
 </ul>
 <p>Toucan uses the following order when determining whether a file or
 folded should be excluded.</p>
 <ul class="simple">
-<li>Firstly the path is expanded if it is a Variable (see below) and
+<li><p>Firstly the path is expanded if it is a Variable (see below) and
 then matched against the list of locations to include. If any of
-these match then Toucan immediately carries on and uses the path.</li>
-<li>Otherwise it next compares the path to the list of folders to
+these match then Toucan immediately carries on and uses the path.</p></li>
+<li><p>Otherwise it next compares the path to the list of folders to
 exclude, even if it is a file, because an excluded folder should
 exclude its sub-files unless they are specifically included. If any
 of these match then then path is ignored and Toucan moves on to the
-next path.</li>
-<li>Next the path is tested, if it is a file then it is matched
+next path.</p></li>
+<li><p>Next the path is tested, if it is a file then it is matched
 ageist the files to exclude, if any of these match then it is
-excluded and Toucan moves onto the next path.</li>
-<li>Otherwise the path is not excluded and Toucan uses it.</li>
+excluded and Toucan moves onto the next path.</p></li>
+<li><p>Otherwise the path is not excluded and Toucan uses it.</p></li>
 </ul>
 </div>
 <div class="section" id="user-interface">
@@ -180,17 +182,15 @@ to press the OK button to insert it into your set of Rules.</p>
     </ul>
    </div>
 <div id="searchbox" style="display: none" role="search">
-  <h3>Quick search</h3>
+  <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="../search.html" method="get">
-      <input type="text" name="q" />
+      <input type="text" name="q" aria-labelledby="searchlabel" />
       <input type="submit" value="Go" />
-      <input type="hidden" name="check_keywords" value="yes" />
-      <input type="hidden" name="area" value="default" />
     </form>
     </div>
 </div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
+<script>$('#searchbox').show(0);</script>
         </div>
       </div>
       <div class="clearer"></div>
@@ -207,12 +207,12 @@ to press the OK button to insert it into your set of Rules.</p>
         <li class="right" >
           <a href="secure.html" title="Secure"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">Toucan 3.1.7 documentation</a> &#187;</li> 
+        <li class="nav-item nav-item-0"><a href="../index.html">Toucan 3.1.8 documentation</a> &#187;</li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2013-2019, Steve Lamerton, Alex Tereschenko.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.2.
+        &#169; Copyright 2013-2020, Steve Lamerton, Alex Tereschenko.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.3.
     </div>
   </body>
 </html>
